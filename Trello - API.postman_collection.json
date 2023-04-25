@@ -1,0 +1,2280 @@
+{
+	"info": {
+		"_postman_id": "99aaa6b5-89d2-4bce-b2d5-062615ae2a8f",
+		"name": "Trello - API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26561171"
+	},
+	"item": [
+		{
+			"name": "Boards",
+			"item": [
+				{
+					"name": "Create and Update",
+					"item": [
+						{
+							"name": "Create a Board",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/?key=8a656fb4d40ab5464b26cfb5766e16dc&token=ATTA6e741d194fb48a97946382c43f39cdd8fbc900e7116ce787470e41fe534031d2C73079F7&name=new board",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										""
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "8a656fb4d40ab5464b26cfb5766e16dc"
+										},
+										{
+											"key": "token",
+											"value": "ATTA6e741d194fb48a97946382c43f39cdd8fbc900e7116ce787470e41fe534031d2C73079F7"
+										},
+										{
+											"key": "name",
+											"value": "new board"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a Board",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"new board\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a Board 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards?key={{key}}&token={{token}}&name=shared board",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										},
+										{
+											"key": "name",
+											"value": "shared board"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get a Board",
+					"item": [
+						{
+							"name": "Get a Board",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get a Board 2",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Members",
+					"item": [
+						{
+							"name": "Get Memberships of a Board",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431/memberships?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431",
+										"memberships"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the Members of a Board",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431/members?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431",
+										"members"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Invite Member to Board via email",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431/members?key={{key}}&token={{token}}&email=klaudiakarwo@gmail.com",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431",
+										"members"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										},
+										{
+											"key": "email",
+											"value": "klaudiakarwo@gmail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add a Member of a Board",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431/members/60e44dbc12566f4c45118461?key={{key}}&token={{token}}&type=normal",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431",
+										"members",
+										"60e44dbc12566f4c45118461"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										},
+										{
+											"key": "type",
+											"value": "normal"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove Member from Board",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431/members/60e44dbc12566f4c45118461?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431",
+										"members",
+										"60e44dbc12566f4c45118461"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Actions",
+					"item": [
+						{
+							"name": "Get Actions of a Board",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431/actions?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431",
+										"actions"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "boardStars",
+					"item": [
+						{
+							"name": "Get boardStars on a Board",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431/boardStars?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431",
+										"boardStars"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CheckLists",
+					"item": [
+						{
+							"name": "Get Checklists of a Board",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431/checklists?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431",
+										"checklists"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cards",
+					"item": [
+						{
+							"name": "Get Cards on a Board",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431/cards?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431",
+										"cards"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get filtered Cards on a Board",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431/cards/all?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431",
+										"cards",
+										"all"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Fields",
+					"item": [
+						{
+							"name": "Get Custom Fields for Board",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431/customFields?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431",
+										"customFields"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Labels",
+					"item": [
+						{
+							"name": "Get Labels on a Board",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431/labels?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431",
+										"labels"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a Label on a Board",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431/labels?key={{key}}&token={{token}}&name=urgent&color=yellow",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431",
+										"labels"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										},
+										{
+											"key": "name",
+											"value": "urgent"
+										},
+										{
+											"key": "color",
+											"value": "yellow"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a Label 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431/labels?key={{key}}&token={{token}}&name=Doon&color=blue",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431",
+										"labels"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										},
+										{
+											"key": "name",
+											"value": "Doon"
+										},
+										{
+											"key": "color",
+											"value": "blue"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a Label 2",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/labels/643c1d8f27115dd29071e52d/?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"labels",
+										"643c1d8f27115dd29071e52d",
+										""
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Lists",
+					"item": [
+						{
+							"name": "Get Lists on a Board",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431/lists?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431",
+										"lists"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a List on a Board",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431/lists?key={{key}}&token={{token}}&name=W trakcie testowania",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431",
+										"lists"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										},
+										{
+											"key": "name",
+											"value": "W trakcie testowania"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get filtered Lists on a Board",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431/lists?filter=all&key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"boards",
+										"643ace6094e00519b9d55431",
+										"lists"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": "all"
+										},
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cards",
+			"item": [
+				{
+					"name": "Create and Update",
+					"item": [
+						{
+							"name": "Create a new Card",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards?name=create button \"try premium version for free\"&key={{key}}&token={{token}}&idList=643ace6094e00519b9d55438",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "create button \"try premium version for free\""
+										},
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										},
+										{
+											"key": "idList",
+											"value": "643ace6094e00519b9d55438"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a Card",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4637a8bbcbd013b50f73?key={{key}}&token={{token}}&name=create button \"try premium version\"",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4637a8bbcbd013b50f73"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										},
+										{
+											"key": "name",
+											"value": "create button \"try premium version\""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Card 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards?idList=643ace6094e00519b9d55439&key={{key}}&token={{token}}&name=\"create\" button is not active",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards"
+									],
+									"query": [
+										{
+											"key": "idList",
+											"value": "643ace6094e00519b9d55439"
+										},
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										},
+										{
+											"key": "name",
+											"value": "\"create\" button is not active"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a Card",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4d3a8e5f19aa6ffb02c7?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4d3a8e5f19aa6ffb02c7"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Card",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards?idList=643d716b1c32a9ec4f62d4aa&key={{key}}&token={{token}}&name=create a newsletter",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards"
+									],
+									"query": [
+										{
+											"key": "idList",
+											"value": "643d716b1c32a9ec4f62d4aa"
+										},
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										},
+										{
+											"key": "name",
+											"value": "create a newsletter"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get a Card",
+					"item": [
+						{
+							"name": "Get a Card",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4637a8bbcbd013b50f73?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4637a8bbcbd013b50f73"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get the Board the Card is on",
+					"item": [
+						{
+							"name": "Get the Board the Card is on",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4637a8bbcbd013b50f73/board?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4637a8bbcbd013b50f73",
+										"board"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Checklists",
+					"item": [
+						{
+							"name": "Get Checklists",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4637a8bbcbd013b50f73/checklists?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4637a8bbcbd013b50f73",
+										"checklists"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Checklist",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4637a8bbcbd013b50f73/checklists?key={{key}}&token={{token}}&name=new checklist",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4637a8bbcbd013b50f73",
+										"checklists"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										},
+										{
+											"key": "name",
+											"value": "new checklist"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a Checklist",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4637a8bbcbd013b50f73/checklists/643c526c7b828f65fdf275d6?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4637a8bbcbd013b50f73",
+										"checklists",
+										"643c526c7b828f65fdf275d6"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "List",
+					"item": [
+						{
+							"name": "Get the List of a Card",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4637a8bbcbd013b50f73/list?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4637a8bbcbd013b50f73",
+										"list"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Members",
+					"item": [
+						{
+							"name": "Get the members of a Card",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4637a8bbcbd013b50f73/members?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4637a8bbcbd013b50f73",
+										"members"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Sticker",
+					"item": [
+						{
+							"name": "Get Stickers on a Card",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4637a8bbcbd013b50f73/stickers?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4637a8bbcbd013b50f73",
+										"stickers"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add a Sticker to a Card",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4637a8bbcbd013b50f73/stickers?image=taco-cool&top=20&left=30&zIndex=1&key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4637a8bbcbd013b50f73",
+										"stickers"
+									],
+									"query": [
+										{
+											"key": "image",
+											"value": "taco-cool"
+										},
+										{
+											"key": "top",
+											"value": "20"
+										},
+										{
+											"key": "left",
+											"value": "30"
+										},
+										{
+											"key": "zIndex",
+											"value": "1"
+										},
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get a Sticker on a Card",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4637a8bbcbd013b50f73/stickers/643cd8c1328fb8542f75d2c9?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4637a8bbcbd013b50f73",
+										"stickers",
+										"643cd8c1328fb8542f75d2c9"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a Sticker on a Card",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4637a8bbcbd013b50f73/stickers/643cd8c1328fb8542f75d2c9?top=-60&left=100&zIndex=3&key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4637a8bbcbd013b50f73",
+										"stickers",
+										"643cd8c1328fb8542f75d2c9"
+									],
+									"query": [
+										{
+											"key": "top",
+											"value": "-60"
+										},
+										{
+											"key": "left",
+											"value": "100"
+										},
+										{
+											"key": "zIndex",
+											"value": "3"
+										},
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a Sticker on a Card",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4637a8bbcbd013b50f73/stickers/643cd8c1328fb8542f75d2c9?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4637a8bbcbd013b50f73",
+										"stickers",
+										"643cd8c1328fb8542f75d2c9"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Comment",
+					"item": [
+						{
+							"name": "Add a new comment to a Card",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4637a8bbcbd013b50f73/actions/comments?text=I do not know how to do it, can someone help me?&key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4637a8bbcbd013b50f73",
+										"actions",
+										"comments"
+									],
+									"query": [
+										{
+											"key": "text",
+											"value": "I do not know how to do it, can someone help me?"
+										},
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update comment action on a card",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4637a8bbcbd013b50f73/actions/643cdf4b6e9e55c092cca931/comments?text=I already know how to do it, thank you all for your help&key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4637a8bbcbd013b50f73",
+										"actions",
+										"643cdf4b6e9e55c092cca931",
+										"comments"
+									],
+									"query": [
+										{
+											"key": "text",
+											"value": "I already know how to do it, thank you all for your help"
+										},
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a comment on a Card",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4637a8bbcbd013b50f73/actions/643cdf4b6e9e55c092cca931/comments?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4637a8bbcbd013b50f73",
+										"actions",
+										"643cdf4b6e9e55c092cca931",
+										"comments"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Label",
+					"item": [
+						{
+							"name": "Create a new Label on a Card",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4637a8bbcbd013b50f73/labels?color=green&key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4637a8bbcbd013b50f73",
+										"labels"
+									],
+									"query": [
+										{
+											"key": "color",
+											"value": "green"
+										},
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add a Label to a Card",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643d77d305fa1fb59d3d640b/idLabels?value=643ace60d5e368f250744f48&key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643d77d305fa1fb59d3d640b",
+										"idLabels"
+									],
+									"query": [
+										{
+											"key": "value",
+											"value": "643ace60d5e368f250744f48"
+										},
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove a Label from a Card",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/1/cards/643c4637a8bbcbd013b50f73/idLabels/643ace60d5e368f250744f48?key={{key}}&token={{token}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"1",
+										"cards",
+										"643c4637a8bbcbd013b50f73",
+										"idLabels",
+										"643ace60d5e368f250744f48"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{key}}"
+										},
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Labels",
+			"item": [
+				{
+					"name": "Create a Label",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/labels?name=in the free time&color=lime&idBoard=643ace6094e00519b9d55431&key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"labels"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "in the free time"
+								},
+								{
+									"key": "color",
+									"value": "lime"
+								},
+								{
+									"key": "idBoard",
+									"value": "643ace6094e00519b9d55431"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Label",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/labels/643cf042a6a5475e9c5c0abd?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"labels",
+								"643cf042a6a5475e9c5c0abd"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Label",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/labels/643cf042a6a5475e9c5c0abd?name=important&color=purple&key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"labels",
+								"643cf042a6a5475e9c5c0abd"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "important"
+								},
+								{
+									"key": "color",
+									"value": "purple"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create  a Label 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/labels?name=very important&color=orange&idBoard=643bf244cd58fbadfeaca751&key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"labels"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "very important"
+								},
+								{
+									"key": "color",
+									"value": "orange"
+								},
+								{
+									"key": "idBoard",
+									"value": "643bf244cd58fbadfeaca751"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Label 2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/labels/643cf2ab35fa895087fca8be?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"labels",
+								"643cf2ab35fa895087fca8be"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lists",
+			"item": [
+				{
+					"name": "Create a new List",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/lists?name=features&idBoard=643ace6094e00519b9d55431&key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"lists"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "features"
+								},
+								{
+									"key": "idBoard",
+									"value": "643ace6094e00519b9d55431"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/lists/643d716b1c32a9ec4f62d4aa?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"lists",
+								"643d716b1c32a9ec4f62d4aa"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a List",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/lists/643d716b1c32a9ec4f62d4aa?name=W trakcie testowania&key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"lists",
+								"643d716b1c32a9ec4f62d4aa"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "W trakcie testowania"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Archive all Cards in List",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/lists/643d716b1c32a9ec4f62d4aa/archiveAllCards?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"lists",
+								"643d716b1c32a9ec4f62d4aa",
+								"archiveAllCards"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/lists/643ace6094e00519b9d55439?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"lists",
+								"643ace6094e00519b9d55439"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Lists on a Board",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/boards/643bf244cd58fbadfeaca751/lists?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"643bf244cd58fbadfeaca751",
+								"lists"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Move all Cards in List",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/lists/643ace6094e00519b9d55439/moveAllCards?idBoard=643bf244cd58fbadfeaca751&idList=643bf244cd58fbadfeaca758&key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"lists",
+								"643ace6094e00519b9d55439",
+								"moveAllCards"
+							],
+							"query": [
+								{
+									"key": "idBoard",
+									"value": "643bf244cd58fbadfeaca751"
+								},
+								{
+									"key": "idList",
+									"value": "643bf244cd58fbadfeaca758"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Archive a list",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/lists/643bf244cd58fbadfeaca759/closed?key={{key}}&token={{token}}&value=true",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"lists",
+								"643bf244cd58fbadfeaca759",
+								"closed"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "value",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unarchive a list",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/lists/643bf244cd58fbadfeaca759/closed?key={{key}}&token={{token}}&value=false",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"lists",
+								"643bf244cd58fbadfeaca759",
+								"closed"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "value",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Lists on a Board",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/boards/643ace6094e00519b9d55431/lists?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"643ace6094e00519b9d55431",
+								"lists"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Move List to Board",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/lists/643bf244cd58fbadfeaca75a/idBoard?value=643ace6094e00519b9d55431&key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"lists",
+								"643bf244cd58fbadfeaca75a",
+								"idBoard"
+							],
+							"query": [
+								{
+									"key": "value",
+									"value": "643ace6094e00519b9d55431"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Actions for a List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/lists/643bf244cd58fbadfeaca75a/actions?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"lists",
+								"643bf244cd58fbadfeaca75a",
+								"actions"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Actions for a List 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/lists/643ace6094e00519b9d55438/actions?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"lists",
+								"643ace6094e00519b9d55438",
+								"actions"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get the Board a List is on",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/lists/643ace6094e00519b9d55438/board?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"lists",
+								"643ace6094e00519b9d55438",
+								"board"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cards in a List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/lists/643ace6094e00519b9d55438/cards?key={{key}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"lists",
+								"643ace6094e00519b9d55438",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
